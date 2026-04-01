@@ -110,7 +110,7 @@ export default function TeamPage() {
       title: 'Database Team',
       members: [
         {
-          name: 'Harshal Sahare',
+          name: 'Harshal Shahare',
           role: 'Lead',
           image: '/Harshal Shahare.png',
           description: 'Database design and query optimization.',

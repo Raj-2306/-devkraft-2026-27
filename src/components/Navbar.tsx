@@ -71,14 +71,14 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 w-full glass border-t border-white/10 py-4 px-6 flex flex-col space-y-4 md:hidden"
+          className="absolute top-full left-0 w-full bg-black/90 backdrop-blur-lg border-t border-white/20 py-4 px-6 flex flex-col space-y-4 md:hidden"
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-medium text-gray-300 hover:text-white transition-colors"
+              className="text-lg font-medium text-gray-300 hover:text-white transition-colors text-center w-full"
             >
               {link.name}
             </a>
