@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/basheq-vintage');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-background: #050505;
+  --color-foreground: #ffffff;
+  --color-primary: #f97316; /* Orange */
+  --color-secondary: #ea580c; /* Darker Orange */
+  --color-accent: #fb923c; /* Lighter Orange */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+  
+  body {
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Basheq Vintage', var(--font-display);
+  }
+
+  .hero-title {
+    font-family: 'Basheq Vintage', var(--font-display);
+    font-size: clamp(4rem, 16vw, 16rem);
+    line-height: 0.8;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #ffa500, #000, #f97316, #ffffff, #f97316, #282828);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 8s ease infinite;
+  }
+
+  .hero-title::after {
+    content: 'DEVKRAFT';
+    position: absolute;
+    inset: 0;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    color: #000;
+    mix-blend-mode: screen;
+    opacity: 0.45;
+    display: block;
+  }
+
+  @keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Neon Text Glow */
+.text-glow {
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(234, 88, 12, 0.5);
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, #f97316, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
