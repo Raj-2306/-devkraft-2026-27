@@ -7,14 +7,14 @@ export default function Mentors() {
       name: "Dr. Dheeraj Agarwal",
       role: "Mentor",
       image: "/DA.jpeg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Dheeraj Agrawal is a seasoned education and training professional associated with the Training and Placement (TNP) cell of his college. With over two decades of experience, he plays a key role in strengthening industry–academia connections and enhancing student employability. He also serves as the faculty coordinator of the DevKraft team, where he mentors and guides students in technical and professional development initiatives."
     },
     {
       id: 2,
       name: "Rahul Pandit",
       role: "Mentor",
       image: "/HP.jpeg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Rahul Pandit is a founding member of his college's coding community, driven by a clear vision from his first year to build a platform for technical growth and collaboration. Working under the Training and Placement (TNP) cell, he has played a key role in fostering a coding culture, encouraging peer learning, and supporting students in developing industry-relevant skills."
     }
   ];
 

@@ -1,18 +1,8 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Code, Trophy, Cpu } from 'lucide-react';
+import { ArrowRight, Code, Trophy, Cpu, MessageSquare } from 'lucide-react';
 
 export default function Events() {
   const events = [
-    {
-      id: "techfeud",
-      title: "TechFeud",
-      description: "Inspired by the popular game show \"Family Feud,\" our Tech Feud event is an exciting and interactive quiz competition that challenges participants' knowledge in areas such as technology, programming, and industry trends. With its unique blend of education and entertainment, Tech Feud offers a competitive yet enjoyable atmosphere where students can test their tech expertise while having fun.",
-      image: "/techfeud.png",
-      icon: <Trophy size={40} className="text-primary" />,
-      color: "from-orange-500/20 to-orange-900/20",
-      border: "group-hover:border-orange-500/50",
-      link: "#"
-    },
     {
       id: "devclash",
       title: "DevClash",
@@ -24,9 +14,21 @@ export default function Events() {
       link: "https://devclashh-2026.vercel.app/"
     },
     {
+      id: "devtalks",
+      title: "Dev Talks",
+      description: "Dev Talks is a dynamic speaker series by DevKraft that brings together industry experts, innovators, and thought leaders to share real-world insights and experiences. From cutting-edge technologies to career guidance and emerging industry trends, each session is designed to bridge the gap between learning and application.\n\nMore than just a talk, Dev Talks creates a platform for meaningful conversations, networking, and inspiration—empowering students to think bigger, build better, and grow into future-ready professionals.",
+      image: "/devtalks.png",
+      icon: <MessageSquare size={40} className="text-blue-500" />,
+      color: "from-blue-500/20 to-blue-900/20",
+      border: "group-hover:border-blue-500/50",
+      link: "#"
+    },
+    {
       id: "devchef",
       title: "DevChef",
-      description: "DevChef is Devkraft’s monthly coding contest, designed to challenge and enhance the coding skills of students across all levels. Each month, participants compete in algorithmic problem-solving, testing their knowledge in data structures, algorithms, and real-world coding challenges. Whether you're a beginner or a seasoned coder, DevChef provides an exciting platform to improve your skills and climb the leaderboard.",      image: "/devchef.png",      icon: <Cpu size={40} className="text-red-500" />,
+      description: "DevChef is Devkraft's quarterly coding contest, designed to challenge and enhance the coding skills of students across all levels. Each quarter, participants compete in algorithmic problem-solving, testing their knowledge in data structures, algorithms, and real-world coding challenges. Whether you're a beginner or a seasoned coder, DevChef provides an exciting platform to improve your skills and climb the leaderboard.",
+      image: "/devchef.png",
+      icon: <Cpu size={40} className="text-red-500" />,
       color: "from-red-500/20 to-red-900/20",
       border: "group-hover:border-red-500/50",
       link: "https://www.devchef.in/"
@@ -68,7 +70,7 @@ export default function Events() {
               
               <div className="relative z-10">
                 <div className="mb-8 rounded-2xl overflow-hidden border border-white/5 group-hover:scale-110 transition-transform duration-500 flex items-center justify-center bg-black/30 h-48">
-                  {(event.id === "devchef" || event.id === "techfeud") ? (
+                  {event.id === "devchef" ? (
                     <img src={event.image} alt={event.title} className="w-4/5 h-4/5 object-contain" />
                   ) : (
                     <img src={event.image} alt={event.title} className="w-full h-full object-cover" />

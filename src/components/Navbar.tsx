@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,7 +16,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  const navLinks = location.pathname === '/team' ? [] : [
     { name: 'About', href: '#about' },
     { name: 'Events', href: '#events' },
   ];
@@ -46,12 +47,14 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
-          <Link
-            to="/team"
-            className="px-6 py-2 bg-primary text-black font-semibold rounded-lg hover:bg-secondary transition-colors"
-          >
-            Meet the Team
-          </Link>
+          {location.pathname !== '/team' && (
+            <Link
+              to="/team"
+              className="px-6 py-2 bg-primary text-black font-semibold rounded-lg hover:bg-secondary transition-colors"
+            >
+              Meet the Team
+            </Link>
+          )}
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -80,13 +83,15 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <Link
-            to="/team"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="px-6 py-2 bg-primary text-black font-semibold rounded-lg hover:bg-secondary transition-colors text-center"
-          >
-            Meet the Team
-          </Link>
+          {location.pathname !== '/team' && (
+            <Link
+              to="/team"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-6 py-2 bg-primary text-black font-semibold rounded-lg hover:bg-secondary transition-colors text-center"
+            >
+              Meet the Team
+            </Link>
+          )}
         </motion.div>
       )}
     </motion.nav>

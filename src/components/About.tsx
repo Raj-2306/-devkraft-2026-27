@@ -33,37 +33,37 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-square rounded-3xl overflow-hidden glass-card p-8 flex flex-col justify-center items-center relative z-10">
+            <div className="aspect-square rounded-3xl overflow-hidden glass-card p-4 md:p-8 flex flex-col justify-center items-center relative z-10">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-50"></div>
               
-              <div className="grid grid-cols-2 gap-8 w-full h-full relative z-20">
+              <div className="grid grid-cols-2 gap-2 md:gap-8 w-full h-full relative z-20">
                 <motion.div 
                   whileHover={{ y: -10 }}
-                  className="bg-black/50 rounded-2xl p-12 border border-white/5 flex flex-col items-center justify-center gap-4"
+                  className="bg-black/50 rounded-full p-4 md:p-12 border border-white/5 flex flex-col items-center justify-center gap-2 md:gap-4 aspect-square"
                 >
-                  <Code2 size={48} className="text-primary" />
-                  <span className="font-medium text-gray-300">Development</span>
+                  <Code2 size={24} className="text-primary md:size-12" />
+                  <span className="font-medium text-gray-300 text-xs md:text-base text-center">Development</span>
                 </motion.div>
                 <motion.div 
                   whileHover={{ y: -10 }}
-                  className="bg-black/50 rounded-2xl p-12 border border-white/5 flex flex-col items-center justify-center gap-4 translate-y-4"
+                  className="bg-black/50 rounded-full p-4 md:p-12 border border-white/5 flex flex-col items-center justify-center gap-2 md:gap-4 aspect-square"
                 >
-                  <Terminal size={48} className="text-secondary" />
-                  <span className="font-medium text-gray-300">Programming</span>
+                  <Terminal size={24} className="text-secondary md:size-12" />
+                  <span className="font-medium text-gray-300 text-xs md:text-base text-center">Programming</span>
                 </motion.div>
                 <motion.div 
                   whileHover={{ y: -10 }}
-                  className="bg-black/50 rounded-2xl p-12 border border-white/5 flex flex-col items-center justify-center gap-4 -translate-y-4"
+                  className="bg-black/50 rounded-full p-4 md:p-12 border border-white/5 flex flex-col items-center justify-center gap-2 md:gap-4 aspect-square"
                 >
-                  <Cpu size={48} className="text-amber-500" />
-                  <span className="font-medium text-gray-300">Innovation</span>
+                  <Cpu size={24} className="text-amber-500 md:size-12" />
+                  <span className="font-medium text-gray-300 text-xs md:text-base text-center">Innovation</span>
                 </motion.div>
                 <motion.div 
                   whileHover={{ y: -10 }}
-                  className="bg-black/50 rounded-2xl p-12 border border-white/5 flex flex-col items-center justify-center gap-4"
+                  className="bg-black/50 rounded-full p-4 md:p-12 border border-white/5 flex flex-col items-center justify-center gap-2 md:gap-4 aspect-square"
                 >
-                  <div className="text-4xl font-bold text-white">DK</div>
-                  <span className="font-medium text-gray-300">Community</span>
+                  <div className="text-xl md:text-4xl font-bold text-white">DK</div>
+                  <span className="font-medium text-gray-300 text-xs md:text-base text-center">Community</span>
                 </motion.div>
               </div>
             </div>
